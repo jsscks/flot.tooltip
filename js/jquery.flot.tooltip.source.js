@@ -373,8 +373,8 @@
 	    }
 	    
         else if (typeof item.series.lines !== "undefined" && item.series.lines.steps) {
-            x = item.series.datapoints.points[item.dataIndex * 2];
-            y = item.series.datapoints.points[item.dataIndex * 2 + 1];
+            x = item.series.datapoints.points[item.dataIndex * item.series.datapoints.pointsize];
+            y = item.series.datapoints.points[item.dataIndex * item.series.datapoints.pointsize + 1];
             // TODO: where to find custom text in this variant?
             customText = "";
         } else {
@@ -584,7 +584,7 @@
         init: init,
         options: defaultOptions,
         name: 'tooltip',
-        version: '0.8.5'
+        version: '0.8.6'
     });
 
 })(jQuery);
