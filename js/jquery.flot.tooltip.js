@@ -565,7 +565,7 @@
         init: init,
         options: defaultOptions,
         name: 'tooltip',
-        version: '0.8.5'
+        version: '0.8.6'
     });
 
 })(jQuery);
